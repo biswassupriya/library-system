@@ -132,7 +132,7 @@
                         <configuration>
                             <archive>
                                 <manifest>
-                                    <mainClass>com.sample.TestMain</mainClass>
+                                    <mainClass>com.library.system.MainAppTest</mainClass>
                                 </manifest>
                             </archive>
                         </configuration>
