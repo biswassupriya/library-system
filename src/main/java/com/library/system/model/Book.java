@@ -4,6 +4,12 @@ import java.util.Objects;
 
 /** Model class Book for storing book information*/
 public class Book {
+
+
+    /**
+     * Model Class to store Books for Library
+
+     */
     private int isbn;
     private String bookName;
     private String user;

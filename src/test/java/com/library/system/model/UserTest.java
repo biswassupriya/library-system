@@ -98,8 +98,7 @@ public class UserTest {
             .outerRule(new ExternalResource() {
                 @Override
                 protected void after() {
-
-                    System.out.println("Test " + testName + " " + (failed ? "failed" : "finished") + ".");
+                    System.out.println("Test-" + testName + "-" + (failed ? "failed" : "passed"));
                 }
             })
             .around(new TestWatcher() {
