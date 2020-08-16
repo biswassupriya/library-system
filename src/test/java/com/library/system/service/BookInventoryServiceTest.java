@@ -15,6 +15,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/** class BookInventoryServiceTest is to test the adding of a book in a non-synchronised manner of a single
+ * and multi-threaded process  */
 public class BookInventoryServiceTest {
 
     BookInventoryService bookInventoryService;
@@ -26,6 +28,8 @@ public class BookInventoryServiceTest {
         Thread.sleep(3000);
     }
 
+    /** testConcurrency to add a book withoutSynchonisation
+     * @throws Exception when InterruptedException */
     @Test
     public void testConcurrency_withoutSynchronisation_bookInventoryService_withMultipleThread_fails() throws InterruptedException {
         List<Integer> isbns = new ArrayList();
@@ -34,6 +38,7 @@ public class BookInventoryServiceTest {
             books.add(new Book(i));
             isbns.add(i);
         }
+
 
         List<Book> insertedBooks = bookInventoryService.addBooks(books);
         Assert.assertFalse(insertedBooks.stream()

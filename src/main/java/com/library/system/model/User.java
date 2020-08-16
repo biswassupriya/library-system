@@ -3,6 +3,7 @@ package com.library.system.model;
 import java.util.ArrayList;
 import java.util.List;
 
+/** model class  hold all the user information */
 public class User {
 
     public int getUserId() {
@@ -65,14 +66,5 @@ public class User {
             return "User Id: " + userId + " not found";
         }
     }
-
-  //  public int getBooksBorrowedCount(int userId) {
-     //   if (this.userId == userId) {
-            // return "UserId: Has borrowed books:".format(String.valueOf(userId), bookBorrowed.length;
-       //} else {
-          //  "User Id not found".format("", userId);
-        //}
-
-  //  }
 
 }

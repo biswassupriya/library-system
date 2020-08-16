@@ -1,7 +1,7 @@
 package com.library.system.model;
 
 import java.util.List;
-
+/** model class Library to hold all books and users */
 public class Library {
 
     private List<Book> books;

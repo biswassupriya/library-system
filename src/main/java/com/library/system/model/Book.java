@@ -2,6 +2,7 @@ package com.library.system.model;
 
 import java.util.Objects;
 
+/** Model class Book for storing book information*/
 public class Book {
     private int isbn;
     private String bookName;

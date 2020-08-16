@@ -1,5 +1,5 @@
 package com.library.system.model;
-
+/** class not used*/
 public class BookCounter {
     int counter = 0;
     //private static volatile int counter = 0;
