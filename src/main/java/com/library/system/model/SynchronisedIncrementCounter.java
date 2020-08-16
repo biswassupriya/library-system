@@ -6,12 +6,6 @@ public class SynchronisedIncrementCounter {
 
     /** Synchronised Method increments the counter */
     public synchronized void incrementCounterSync() {
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
         counter++;
     }
 
