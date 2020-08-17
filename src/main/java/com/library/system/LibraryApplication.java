@@ -7,6 +7,7 @@ import com.library.system.service.BookInventorySynchronisedService;
 import java.util.ArrayList;
 import java.util.List;
 
+/** main class for LibraryApplication */
 public class LibraryApplication {
 
     public static void main(String[] args) throws InterruptedException {

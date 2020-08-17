@@ -24,15 +24,12 @@ public class BookInventoryServiceTest {
     List<Book> books;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         books = new ArrayList<>();
-        Thread.sleep(3000);
     }
 
-    /** testConcurrency to add a book withoutSynchonisation
-     * @throws Exception when InterruptedException */
     @Test
-    public void testConcurrency_withoutSynchronisation_withMultipleThread_fails() throws InterruptedException {
+    public void testConcurrency_withoutSynchronisation_withMultipleThread_passes() throws InterruptedException {
         List<Integer> isbns = new ArrayList();
         bookInventoryService = new BookInventoryService(10);
         for (int i = 1; i <= 10; i++) {

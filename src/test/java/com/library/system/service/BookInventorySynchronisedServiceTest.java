@@ -20,10 +20,6 @@ public class BookInventorySynchronisedServiceTest {
 
     BookInventorySynchronisedService bookInventoryService;
 
-    @Before
-    public void setUp() throws Exception {
-    }
-
     @Test
     public void testConcurrency_withSynchronisation_withMultipleThread_passes() throws InterruptedException {
         List<Integer> isbns = new ArrayList();

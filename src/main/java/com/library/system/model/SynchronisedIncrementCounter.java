@@ -1,6 +1,6 @@
 package com.library.system.model;
 
-/**SynchronisedIncrementCounter generates a unique number in a synchronised manner */
+/**SynchronisedIncrementCounter generates the isbn unique book number in a synchronised manner */
 public class SynchronisedIncrementCounter {
     int counter = 0;
 

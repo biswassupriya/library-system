@@ -6,14 +6,10 @@ import java.util.Objects;
 public class Book {
 
 
-    /**
-     * Model Class to store Books for Library
-
-     */
     private int isbn;
     private String bookName;
     private String user;
-    private String[] damageDescription = new String[20];
+    private final String[] damageDescription = new String[20];
 
     public Book(int isbn) {
         this.isbn = isbn;
@@ -49,11 +45,7 @@ public class Book {
 
     public boolean isBookAvailable(int isbn) {
         if (this.isbn == isbn) {
-            if (this.user == null) {
-                return true;
-            } else {
-                return false;
-            }
+            return this.user == null;
         } else
             return false;
     }
