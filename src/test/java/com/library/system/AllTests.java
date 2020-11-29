@@ -1,14 +1,13 @@
 package com.library.system;
 
-import com.library.system.model.UserTest;
-import com.library.system.service.BookInventoryServiceTest;
-import com.library.system.service.BookInventorySynchronisedServiceTest;
+import com.library.system.service.UserServiceTest;
+import com.library.system.service.BookServiceTest;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({BookInventoryServiceTest.class, BookInventorySynchronisedServiceTest.class})
+@SuiteClasses({UserServiceTest.class, BookServiceTest.class})
 public class AllTests {
 
 }

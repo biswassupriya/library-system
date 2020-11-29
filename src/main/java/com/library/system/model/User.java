@@ -6,6 +6,11 @@ import java.util.List;
 /** model class  hold all the user information */
 public class User {
 
+    public User(int userId, String userName) {
+        this.userId = userId;
+        this.userName = userName;
+    }
+
     public int getUserId() {
         return userId;
     }

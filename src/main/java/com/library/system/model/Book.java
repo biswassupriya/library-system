@@ -1,5 +1,6 @@
 package com.library.system.model;
 
+import java.util.Arrays;
 import java.util.Objects;
 
 /** Model class Book for storing book information*/
@@ -13,6 +14,12 @@ public class Book {
 
     public Book(int isbn) {
         this.isbn = isbn;
+    }
+
+    public Book(int isbn, String bookName, String user) {
+        this.isbn = isbn;
+        this.bookName = bookName;
+        this.user = user;
     }
 
     public void setIsbn(int isbn) {
@@ -53,9 +60,9 @@ public class Book {
     public void getBookDetailsByIsbn(int isbn) {
         if (this.isbn == isbn) {
             if (this.user == null) {
-                System.out.println("isbn" + isbn + "BookName" + bookName + "DamageDescription" + damageDescription);
+                System.out.println("isbn" + isbn + "BookName" + bookName + "DamageDescription" + Arrays.toString(damageDescription));
             } else {
-                System.out.println(isbn + "Book Name" + bookName + "Borrowed by" + this.user + "DamageDescription" + damageDescription);
+                System.out.println(isbn + "Book Name" + bookName + "Borrowed by" + this.user + "DamageDescription" + Arrays.toString(damageDescription));
             }
         } else {
             System.out.println("isbn not found");
@@ -65,9 +72,9 @@ public class Book {
 
     public void getBookDetail() {
         if (this.user == null) {
-            System.out.println(isbn + "BookName" + bookName + "Damage Description" + damageDescription);
+            System.out.println(isbn + "BookName" + bookName + "Damage Description" + Arrays.toString(damageDescription));
         } else {
-            System.out.println(isbn + "Book Name" + bookName + "Borrowed by" + this.user + "Damage description: " + damageDescription);
+            System.out.println(isbn + "Book Name" + bookName + "Borrowed by" + this.user + "Damage description: " + Arrays.toString(damageDescription));
         }
     }
 

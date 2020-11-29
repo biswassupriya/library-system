@@ -19,8 +19,8 @@ public class UserTest {
     User testee;
 
     @Before
-    public void setUp() throws Exception {
-        testee = new User();
+    public void setUp() {
+        testee = new User(123, "Hello");
     }
 
     @Test
@@ -28,9 +28,9 @@ public class UserTest {
 
         final boolean result = testee.appendMessage("supriya");
 
-        Assert.assertTrue(result == true);
+        Assert.assertTrue(result);
         List<String> messages = testee.getMessages();
-        Assert.assertTrue(messages.get(0) == "supriya");
+        Assert.assertSame("supriya", messages.get(0));
     }
 
     @Test
@@ -39,9 +39,9 @@ public class UserTest {
 
         final boolean message = testee.appendMessage("snigdha");
 
-        Assert.assertTrue(message == true);
+        Assert.assertTrue(message);
         List<String> messages = testee.getMessages();
-        Assert.assertTrue(messages.get(1) == "snigdha");
+        Assert.assertSame("snigdha", messages.get(1));
     }
 
     @Test
