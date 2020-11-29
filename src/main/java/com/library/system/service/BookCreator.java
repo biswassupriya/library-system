@@ -6,6 +6,10 @@ import com.library.system.model.SynchronisedBookIdGenerator;
 
 import java.util.List;
 
+/**
+ * BookCreator creates unique id before adding a new book into the library
+ * It uses the SynchronisedBookIdGenerator class to get the uniq ids
+ */
 public class BookCreator implements Runnable {
 
     private List<Book> books;
@@ -16,11 +20,6 @@ public class BookCreator implements Runnable {
 
     @Override
     public void run() {
-/*        try {
-            Thread.sleep(10);
-        } catch (InterruptedException e) {
-            e. printStackTrace ();
-        }*/
         for (int i = 0; i < books.size(); i++) {
             Library.setBook(new Book(SynchronisedBookIdGenerator.increment(), books.get(0).getBookName(),books.get(0).getUser()));
         }

@@ -34,7 +34,7 @@ public class UserServiceTest {
     public void testConcurrency_withoutSynchronisation_withMultipleThread() {
         List<Integer> expectedUserIds = new ArrayList<>();
         userService = new UserService(10);
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 10; i++) {
             users.add(new User(i, String.valueOf(i)));
             expectedUserIds.add(i);
         }

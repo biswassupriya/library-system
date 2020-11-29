@@ -8,10 +8,6 @@ public class SynchronisedBookIdGenerator {
     public static synchronized int increment() {
         return counter++;
     }
-/*
-    public static int getCounter() {
-        return counter;
-    }*/
 
     public static void resetCounter() {
         counter = 0;

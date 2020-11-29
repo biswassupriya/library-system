@@ -10,21 +10,11 @@ public class UserIdGenerator {
      * un-synchronised increment of the counter
      */
     public static int increment() {
-/*        try {
-            Thread.sleep(10);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }*/
         return counter++;
     }
-
-/*    public static int getCounter() {
-        return counter;
-    }*/
 
     public static void resetCounter() {
         counter = 0;
     }
-
 
 }

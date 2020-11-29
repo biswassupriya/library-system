@@ -7,7 +7,8 @@ import com.library.system.model.Library;
 import java.util.List;
 
 /**
- * BookService adds books in a synchronised manner
+ * BookService adds books by calling the BookCreator
+ * Also creates the threads
  */
 public class BookService {
 
@@ -24,8 +25,7 @@ public class BookService {
 
 
     /**
-     * adds list of books by calling the synchronised counter and also throws an exception incase
-     * the threads are interrupted
+     * adds list of books by calling the BookCreator
      *
      * @param books list of Books
      * @return list of Books
