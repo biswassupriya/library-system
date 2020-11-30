@@ -4,7 +4,10 @@ package com.library.system.model;
 public class SynchronisedBookIdGenerator {
     private static int counter = 0;
 
-    /** Synchronised Method increments the counter */
+    /** Synchronised Method increments the counter
+     *  @return Integer value after incrementing the counter
+     *
+     */
     public static synchronized int increment() {
         return counter++;
     }
